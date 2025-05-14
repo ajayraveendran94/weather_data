@@ -1,21 +1,9 @@
 class WeatherService
     include HTTParty
-    base_uri '  5'
+    base_uri 'https://api.openweathermap.org/data/2.5'
     
     def self.current_weather(latitude, longitude)
-        response = HTTParty.get("https://api.openweathermap.org/data/2.5/weather", {
-            query: {
-                lat: latitude,
-                lon: longitude,
-                appid: ENV['OPENWEATHER_API_KEY']
-            }
-        })
-        if response.success?
-            response.parsed_response
-        else 
-            { error: "API Error: #{response.code}"}
-        end
-        #fetch_weather("/weather", latitude, longitude)
+        fetch_weather("/weather", latitude, longitude)
     end
     
     def self.extended_forecast(latitude, longitude)
