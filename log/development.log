@@ -1,0 +1,1051 @@
+  [1m[35m (172.7ms)[0m  [1m[35mCREATE DATABASE "weather_data_development" ENCODING = 'unicode'[0m
+  [1m[35m (88.2ms)[0m  [1m[35mCREATE DATABASE "weather_data_test" ENCODING = 'unicode'[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6137767972297032015)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-05-14 11:12:21.259683', '2025-05-14 11:12:21.259686') RETURNING "key"[0m
+Migrating to CreateAddresses (20250514101254)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "street" character varying, "city" character varying, "state" character varying, "zip_code" character varying, "latitude" decimal, "longitude" decimal, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_zip_code" ON "addresses" ("zip_code")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250514101254') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6137767972297032015)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2025-05-14 16:43:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:6: syntax error, unexpected ':', expecting ']'
+        @address = params[: address]
+                          ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+            if @forecast[: error]
+            ^~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:12: syntax error, unexpected ':', expecting ']'
+                flash.now[: alert] = @forecast[: error]
+                          ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:15: else without rescue is useless
+        else
+        ^~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:16: syntax error, unexpected ':', expecting ']'
+            flash.now[: alert] = "Please enter an ad...
+                      ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'):
+  
+app/controllers/forecasts_controller.rb:6: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+app/controllers/forecasts_controller.rb:12: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:15: else without rescue is useless
+app/controllers/forecasts_controller.rb:16: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2025-05-14 16:45:11 +0530
+  
+SyntaxError (/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+            if @forecast[: error]
+            ^~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:12: syntax error, unexpected ':', expecting ']'
+                flash.now[: alert] = @forecast[: error]
+                          ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:15: else without rescue is useless
+        else
+        ^~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:16: syntax error, unexpected ':', expecting ']'
+            flash.now[: alert] = "Please enter an ad...
+                      ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'):
+  
+app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+app/controllers/forecasts_controller.rb:12: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:15: else without rescue is useless
+app/controllers/forecasts_controller.rb:16: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2025-05-14 16:45:35 +0530
+  
+SyntaxError (/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+            if @forecast[:error]
+            ^~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:13: syntax error, unexpected ':', expecting `end' or dummy end
+                render: index
+                      ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:15: else without rescue is useless
+        else
+        ^~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:17: syntax error, unexpected ':', expecting `end' or dummy end
+            render: index
+                  ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'):
+  
+app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+app/controllers/forecasts_controller.rb:13: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/forecasts_controller.rb:15: else without rescue is useless
+app/controllers/forecasts_controller.rb:17: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2025-05-14 16:46:17 +0530
+  
+SyntaxError (/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+            if @forecast[:error]
+            ^~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:15: else without rescue is useless
+        else
+        ^~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'):
+  
+app/controllers/forecasts_controller.rb:11: syntax error, unexpected `if', expecting ':'
+app/controllers/forecasts_controller.rb:15: else without rescue is useless
+app/controllers/forecasts_controller.rb:20: syntax error, unexpected `end'
+Started GET "/" for ::1 at 2025-05-14 16:48:10 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2056)
+  Rendered layout layouts/application.html.erb (Duration: 1004.7ms | Allocations: 134349)
+Completed 200 OK in 1030ms (Views: 1007.9ms | ActiveRecord: 0.0ms | Allocations: 137004)
+
+
+Started GET "/" for ::1 at 2025-05-14 16:48:41 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1164)
+  Rendered layout layouts/application.html.erb (Duration: 63.3ms | Allocations: 11342)
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.0ms | Allocations: 11580)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 16:49:51 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms | Allocations: 5419)
+
+
+  
+SyntaxError (/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:20: syntax error, unexpected local variable or method, expecting ':'
+...                 address_or_zip
+...                 ^~~~~~~~~~~~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:52: syntax error, unexpected `else', expecting ':'
+        else 
+        ^~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:59: syntax error, unexpected local variable or method, expecting ':'
+            address_or_zip.zip_code
+            ^~~~~~~~~~~~~~
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:64: syntax error, unexpected ':', expecting ']'
+            geocoded[: zip_code] if geocoded
+                     ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+...      return { error: current[: error] } if current[: error]
+...                              ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+...current[: error] } if current[: error]
+...                              ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+...     return { error: extended[: error] } if extended[: error]
+...                              ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+...tended[: error] } if extended[: error]
+...                              ^
+):
+  
+app/services/weather_service.rb:20: syntax error, unexpected local variable or method, expecting ':'
+app/services/weather_service.rb:52: syntax error, unexpected `else', expecting ':'
+app/services/weather_service.rb:59: syntax error, unexpected local variable or method, expecting ':'
+app/services/weather_service.rb:64: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:9:in `show'
+Started GET "/" for ::1 at 2025-05-14 16:57:46 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 18438)
+Completed 200 OK in 77ms (Views: 68.7ms | ActiveRecord: 0.0ms | Allocations: 19518)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 16:57:51 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1301)
+
+
+  
+SyntaxError (/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:64: syntax error, unexpected ':', expecting ']'
+            geocoded[: zip_code] if geocoded
+                     ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+...      return { error: current[: error] } if current[: error]
+...                              ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+...current[: error] } if current[: error]
+...                              ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+...     return { error: extended[: error] } if extended[: error]
+...                              ^
+/Users/ajayraveendran/Documents/Projects/weather_data/app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+...tended[: error] } if extended[: error]
+...                              ^
+):
+  
+app/services/weather_service.rb:64: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:69: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+app/services/weather_service.rb:70: syntax error, unexpected ':', expecting ']'
+app/controllers/forecasts_controller.rb:9:in `show'
+Started GET "/" for ::1 at 2025-05-14 16:59:29 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 18438)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 19518)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 16:59:32 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1081)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2169)
+Completed 200 OK in 1050ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 14461)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 17:02:25 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 122.7ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 129.8ms | Allocations: 2247)
+Completed 200 OK in 868ms (Views: 135.6ms | ActiveRecord: 0.0ms | Allocations: 3782)
+
+
+  [1m[36mAddress Load (1.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 17:09:45 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 2247)
+Completed 200 OK in 1011ms (Views: 32.6ms | ActiveRecord: 0.0ms | Allocations: 3785)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 17:11:59 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 481)
+
+
+  
+NoMethodError (undefined method `pry' for an instance of Binding):
+  
+app/controllers/forecasts_controller.rb:7:in `show'
+Started GET "/" for ::1 at 2025-05-14 17:13:07 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 82.4ms | Allocations: 18438)
+Completed 200 OK in 104ms (Views: 90.1ms | ActiveRecord: 0.0ms | Allocations: 19520)
+
+
+Started GET "/" for ::1 at 2025-05-14 17:13:07 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1160)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2362)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+Started GET "/" for ::1 at 2025-05-14 17:13:09 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2364)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2601)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 17:13:13 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+New Main Street Anytown, CA 91234-5678 USA
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1165)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2253)
+Completed 200 OK in 563ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4967)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 17:13:50 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1355)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 18116)
+Completed 200 OK in 542ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 21619)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 17:17:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1881)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 45763)
+Completed 200 OK in 987348ms (Views: 387.3ms | ActiveRecord: 0.0ms | Allocations: 14998484)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 17:34:17 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (2.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:23:in `get_forecast'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:23:in `get_forecast'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:23:in `get_forecast'
+Completed 500 Internal Server Error in 669ms (ActiveRecord: 34.8ms | Allocations: 20110)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/weather"):
+  
+app/services/weather_service.rb:48:in `fetch_weather'
+app/services/weather_service.rb:6:in `current_weather'
+app/services/weather_service.rb:27:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+  [1m[36mAddress Load (7.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2025-05-14 17:36:49 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 18490)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 19585)
+
+
+Started GET "/" for ::1 at 2025-05-14 17:36:49 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1161)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2368)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2606)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 17:37:03 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (5.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ (pry):14:in `get_forecast'
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):14:in `get_forecast'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (pry):14:in `get_forecast'
+  [1m[36mCACHE Address Load (1.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:24:in `get_forecast'
+Completed 500 Internal Server Error in 39451ms (ActiveRecord: 63.5ms | Allocations: 1091119)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/weather"):
+  
+app/services/weather_service.rb:49:in `fetch_weather'
+app/services/weather_service.rb:6:in `current_weather'
+app/services/weather_service.rb:28:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+  [1m[36mAddress Load (2.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2025-05-14 17:41:47 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 18447)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms | Allocations: 19528)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 17:41:50 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (3.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:24:in `get_forecast'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:24:in `get_forecast'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:24:in `get_forecast'
+Completed 500 Internal Server Error in 21300ms (ActiveRecord: 22.6ms | Allocations: 635791)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/weather"):
+  
+app/services/weather_service.rb:49:in `fetch_weather'
+app/services/weather_service.rb:6:in `current_weather'
+app/services/weather_service.rb:28:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+Started GET "/" for ::1 at 2025-05-14 17:55:38 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 61.0ms | Allocations: 18447)
+Completed 200 OK in 77ms (Views: 66.2ms | ActiveRecord: 0.0ms | Allocations: 19528)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 17:55:41 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (2.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:25:in `get_forecast'
+Completed 500 Internal Server Error in 315381ms (ActiveRecord: 19.3ms | Allocations: 2493295)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/weather"):
+  
+app/services/weather_service.rb:50:in `fetch_weather'
+app/services/weather_service.rb:7:in `current_weather'
+app/services/weather_service.rb:29:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+Started GET "/" for ::1 at 2025-05-14 18:01:04 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 91.7ms | Allocations: 18447)
+Completed 200 OK in 100ms (Views: 96.0ms | ActiveRecord: 0.0ms | Allocations: 19528)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:01:07 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (5.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:32:in `get_forecast'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:32:in `get_forecast'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:32:in `get_forecast'
+Completed 500 Internal Server Error in 145837ms (ActiveRecord: 80.9ms | Allocations: 1560578)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/forecast"):
+  
+app/services/weather_service.rb:57:in `fetch_weather'
+app/services/weather_service.rb:18:in `extended_forecast'
+app/services/weather_service.rb:37:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 18:03:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+Started GET "/" for ::1 at 2025-05-14 18:04:00 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 193069)
+  Rendered layout layouts/application.html.erb (Duration: 1267.7ms | Allocations: 18633576)
+Completed 200 OK in 1599ms (Views: 1292.8ms | ActiveRecord: 0.0ms | Allocations: 21172578)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:04:05 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (2.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:32:in `get_forecast'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:32:in `get_forecast'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:32:in `get_forecast'
+Completed 500 Internal Server Error in 43079ms (ActiveRecord: 25.3ms | Allocations: 3834817)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/forecast"):
+  
+app/services/weather_service.rb:57:in `fetch_weather'
+app/services/weather_service.rb:18:in `extended_forecast'
+app/services/weather_service.rb:37:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1078)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 2179)
+Completed 200 OK in 54603ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 29549293)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:05:55 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 18433)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 19517)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:05:58 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (3.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+Completed 500 Internal Server Error in 5687ms (ActiveRecord: 19.0ms | Allocations: 240593)
+
+
+  
+URI::InvalidURIError (bad URI(is not URI?): "http://  5/forecast"):
+  
+app/services/weather_service.rb:61:in `fetch_weather'
+app/services/weather_service.rb:22:in `extended_forecast'
+app/services/weather_service.rb:41:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+Started GET "/" for ::1 at 2025-05-14 18:07:13 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 35.1ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 118.2ms | Allocations: 18450)
+Completed 200 OK in 129ms (Views: 124.5ms | ActiveRecord: 0.0ms | Allocations: 19533)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:07:16 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (4.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+Completed 500 Internal Server Error in 6633ms (ActiveRecord: 21.3ms | Allocations: 246715)
+
+
+  
+NoMethodError (undefined method `[]' for nil):
+  
+app/services/weather_service.rb:84:in `process_forecast_data'
+app/services/weather_service.rb:44:in `get_forecast'
+app/controllers/forecasts_controller.rb:9:in `show'
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 18:09:27 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+Started GET "/" for ::1 at 2025-05-14 18:09:28 +0530
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1332)
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 18311)
+Completed 200 OK in 14370ms (Views: 63.0ms | ActiveRecord: 0.0ms | Allocations: 424670)
+
+
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 18247)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms | Allocations: 19328)
+
+
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 18:09:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+Started GET "/" for ::1 at 2025-05-14 18:09:51 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 174901)
+  Rendered layout layouts/application.html.erb (Duration: 1300.2ms | Allocations: 17576272)
+Completed 200 OK in 1640ms (Views: 1323.9ms | ActiveRecord: 0.0ms | Allocations: 19702524)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:09:56 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1079)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2168)
+Completed 200 OK in 15392ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 24867777)
+
+
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+New {:address=>{:street=>nil, :city=>"Sunnyvale", :state=>"California", :zip_code=>"94085"}, :current=>{:temperature=>281.95, :feels_like=>281.95, :min=>280.74, :max=>283.64, :humidity=>85, :weather=>"Clear", :description=>"clear sky", :icon=>"01n", :wind_speed=>0.45, :datetime=>2025-05-14 18:04:18 +0530}, :timestamp=>2025-05-14 18:10:17.250332 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1857)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1949)
+Completed 500 Internal Server Error in 20736ms (ActiveRecord: 25.7ms | Allocations: 1045845)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    43:                 <h3 class="text-xl font-bold mb-4">5-Day Forecast</h3>
+    44:     
+    45:                 <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+    46:                     <% @forecast[:daily].each do |day| %>
+    47:                         <div class="bg-gray-50 p-4 rounded-md">
+    48:                             <div class="font-medium mb-2"><%= day[:date].strftime('%A') %></div>
+    49:                             <div class="text-lg font-bold"><%= day[:max].round %>° / <%= day[:min].round %>°</div>
+  
+app/views/forecasts/show.html.erb:46
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2025-05-14 18:12:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1971)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | Allocations: 47156)
+Completed 200 OK in 284ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 331974)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:13:01 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (2.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Sunnyvale"], ["state", "California"], ["zip_code", "94085"], ["latitude", "37.3859738"], ["longitude", "-122.0161157"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+New {:address=>{:street=>nil, :city=>"Sunnyvale", :state=>"California", :zip_code=>"94085"}, :current=>{:temperature=>281.95, :feels_like=>281.95, :min=>280.74, :max=>283.64, :humidity=>85, :weather=>"Clear", :description=>"clear sky", :icon=>"01n", :wind_speed=>0.45, :datetime=>2025-05-14 18:04:18 +0530}, :timestamp=>2025-05-14 18:13:07.776218 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1861)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1953)
+Completed 500 Internal Server Error in 6378ms (ActiveRecord: 22.5ms | Allocations: 295902)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil):
+    43:             #     <h3 class="text-xl font-bold mb-4">5-Day Forecast</h3>
+    44:     
+    45:             #     <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+    46:             #         <% @forecast[:daily].each do |day| %>
+    47:             #             <div class="bg-gray-50 p-4 rounded-md">
+    48:             #                 <div class="font-medium mb-2"><%= day[:date].strftime('%A') %></div>
+    49:             #                 <div class="text-lg font-bold"><%= day[:max].round %>° / <%= day[:min].round %>°</div>
+  
+app/views/forecasts/show.html.erb:46
+Started GET "/" for ::1 at 2025-05-14 18:14:14 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1356)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 18450)
+Completed 200 OK in 34ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 19536)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:14:18 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+New {:address=>{:street=>nil, :city=>"Sunnyvale", :state=>"California", :zip_code=>"94085"}, :current=>{:temperature=>281.95, :feels_like=>281.95, :min=>280.74, :max=>283.64, :humidity=>85, :weather=>"Clear", :description=>"clear sky", :icon=>"01n", :wind_speed=>0.45, :datetime=>2025-05-14 18:04:18 +0530}, :timestamp=>2025-05-14 18:13:07.776218 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 446)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1648)
+Completed 200 OK in 18ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3487)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:16:10 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 18253)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.0ms | Allocations: 19333)
+
+
+Started GET "/forecast?address=Main+Street+Anytown%2C+CA+91234-5678+USA&commit=Get+Forecast" for ::1 at 2025-05-14 18:16:14 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Main Street Anytown, CA 91234-5678 USA", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2260)
+Completed 200 OK in 584ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 5306)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:16:21 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+New {:address=>{:street=>nil, :city=>"Sunnyvale", :state=>"California", :zip_code=>"94085"}, :current=>{:temperature=>281.95, :feels_like=>281.95, :min=>280.74, :max=>283.64, :humidity=>85, :weather=>"Clear", :description=>"clear sky", :icon=>"01n", :wind_speed=>0.45, :datetime=>2025-05-14 18:04:18 +0530}, :timestamp=>2025-05-14 18:13:07.776218 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 1641)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 2074)
+
+
+  [1m[36mAddress Load (16.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2025-05-14 18:23:55 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 84.3ms | Allocations: 18305)
+Completed 200 OK in 98ms (Views: 89.2ms | ActiveRecord: 0.0ms | Allocations: 19388)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:23:58 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+New {:address=>{:street=>nil, :city=>"Sunnyvale", :state=>"California", :zip_code=>"94085"}, :current=>{:temperature=>281.95, :feels_like=>281.95, :min=>280.74, :max=>283.64, :humidity=>85, :weather=>"Clear", :description=>"clear sky", :icon=>"01n", :wind_speed=>0.45, :datetime=>2025-05-14 18:04:18 +0530}, :timestamp=>2025-05-14 18:13:07.776218 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 445)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 1647)
+Completed 200 OK in 45ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 3432)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:24:14 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1411)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 18287)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.0ms | Allocations: 19367)
+
+
+Started GET "/forecast?address=94085&commit=Get+Forecast" for ::1 at 2025-05-14 18:24:16 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94085", "commit"=>"Get Forecast"}
+New {:address=>{:street=>nil, :city=>"Sunnyvale", :state=>"California", :zip_code=>"94085"}, :current=>{:temperature=>281.95, :feels_like=>281.95, :min=>280.74, :max=>283.64, :humidity=>85, :weather=>"Clear", :description=>"clear sky", :icon=>"01n", :wind_speed=>0.45, :datetime=>2025-05-14 18:04:18 +0530}, :timestamp=>2025-05-14 18:13:07.776218 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 445)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1647)
+Completed 200 OK in 24ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3403)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:24:24 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 2364)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 2601)
+
+
+Started GET "/forecast?address=686503&commit=Get+Forecast" for ::1 at 2025-05-14 18:24:29 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"686503", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (4.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" = $1 AND "addresses"."city" = $2 AND "addresses"."state" = $3 AND "addresses"."zip_code" = $4 AND "addresses"."latitude" = $5 AND "addresses"."longitude" = $6 LIMIT $7[0m  [["street", "A"], ["city", "B"], ["state", "Kerala"], ["zip_code", "686503"], ["latitude", "9.6108261"], ["longitude", "76.6807632"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+New {:address=>{:street=>"A", :city=>"B", :state=>"Kerala", :zip_code=>"686503"}, :current=>{:temperature=>298.41, :feels_like=>299.42, :min=>298.41, :max=>298.41, :humidity=>93, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>1.17, :datetime=>2025-05-14 18:25:23 +0530}, :timestamp=>2025-05-14 18:25:23.075673 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1331)
+Completed 200 OK in 53829ms (Views: 8.4ms | ActiveRecord: 56.4ms | Allocations: 2016168)
+
+
+  [1m[36mAddress Load (2.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2025-05-14 18:25:34 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 2365)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 2602)
+
+
+Started GET "/forecast?address=686503&commit=Get+Forecast" for ::1 at 2025-05-14 18:25:40 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"686503", "commit"=>"Get Forecast"}
+New {:address=>{:street=>"A", :city=>"B", :state=>"Kerala", :zip_code=>"686503"}, :current=>{:temperature=>298.41, :feels_like=>299.42, :min=>298.41, :max=>298.41, :humidity=>93, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>1.17, :datetime=>2025-05-14 18:25:23 +0530}, :timestamp=>2025-05-14 18:25:23.075673 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1315)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1681)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:25:41 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2364)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2601)
+
+
+Started GET "/forecast?address=686502&commit=Get+Forecast" for ::1 at 2025-05-14 18:25:51 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"686502", "commit"=>"Get Forecast"}
+New {:address=>{:street=>"A", :city=>"B", :state=>"Kerala", :zip_code=>"686503"}, :current=>{:temperature=>298.41, :feels_like=>299.42, :min=>298.41, :max=>298.41, :humidity=>93, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>1.17, :datetime=>2025-05-14 18:25:23 +0530}, :timestamp=>2025-05-14 18:25:23.075673 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1315)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1681)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:25:55 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2364)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 2601)
+
+
+Started GET "/forecast?address=686578&commit=Get+Forecast" for ::1 at 2025-05-14 18:26:03 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"686578", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (7.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" IS NULL AND "addresses"."state" = $1 AND "addresses"."zip_code" = $2 AND "addresses"."latitude" = $3 AND "addresses"."longitude" = $4 LIMIT $5[0m  [["state", "Kerala"], ["zip_code", "686578"], ["latitude", "9.7107973"], ["longitude", "76.7194483"], ["LIMIT", 1]]
+  ↳ (pry):4:in `get_forecast'
+  [1m[36mAddress Load (6.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" = $1 AND "addresses"."city" = $2 AND "addresses"."state" = $3 AND "addresses"."zip_code" = $4 AND "addresses"."latitude" = $5 AND "addresses"."longitude" = $6 LIMIT $7[0m  [["street", "AB"], ["city", "BD"], ["state", "Kerala"], ["zip_code", "686578"], ["latitude", "9.7107973"], ["longitude", "76.7194483"], ["LIMIT", 1]]
+  ↳ (pry):11:in `get_forecast'
+  [1m[36mCACHE Address Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" = $1 AND "addresses"."city" = $2 AND "addresses"."state" = $3 AND "addresses"."zip_code" = $4 AND "addresses"."latitude" = $5 AND "addresses"."longitude" = $6 LIMIT $7[0m  [["street", "AB"], ["city", "BD"], ["state", "Kerala"], ["zip_code", "686578"], ["latitude", "9.7107973"], ["longitude", "76.7194483"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+New {:address=>{:street=>"AB", :city=>"BD", :state=>"Kerala", :zip_code=>"686578"}, :current=>{:temperature=>298.62, :feels_like=>299.65, :min=>298.62, :max=>298.62, :humidity=>93, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>1.34, :datetime=>2025-05-14 18:28:25 +0530}, :timestamp=>2025-05-14 18:28:25.263604 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 1329)
+Completed 200 OK in 142101ms (Views: 14.9ms | ActiveRecord: 3.6ms | Allocations: 4513820)
+
+
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2025-05-14 18:28:38 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1954)
+  Rendered layout layouts/application.html.erb (Duration: 101.6ms | Allocations: 47171)
+Completed 200 OK in 331ms (Views: 106.8ms | ActiveRecord: 0.0ms | Allocations: 64420)
+
+
+Started GET "/forecast?address=94086&commit=Get+Forecast" for ::1 at 2025-05-14 18:28:45 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"94086", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (3.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Bad Griesbach i.Rottal"], ["state", "Bavaria"], ["zip_code", "94086"], ["latitude", "48.4694415"], ["longitude", "13.1646419"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mAddress Create (10.1ms)[0m  [1m[32mINSERT INTO "addresses" ("street", "city", "state", "zip_code", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["street", nil], ["city", "Bad Griesbach i.Rottal"], ["state", "Bavaria"], ["zip_code", "94086"], ["latitude", "48.4694415"], ["longitude", "13.1646419"], ["created_at", "2025-05-14 12:58:51.743520"], ["updated_at", "2025-05-14 12:58:51.743520"]]
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+  [1m[36mTRANSACTION (42.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:36:in `get_forecast'
+New {:address=>{:street=>nil, :city=>"Bad Griesbach i.Rottal", :state=>"Bavaria", :zip_code=>"94086"}, :current=>{:temperature=>294.89, :feels_like=>294.95, :min=>294.4, :max=>295.33, :humidity=>70, :weather=>"Clouds", :description=>"scattered clouds", :icon=>"03d", :wind_speed=>2.08, :datetime=>2025-05-14 18:28:52 +0530}, :timestamp=>2025-05-14 18:28:52.024537 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 485)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1701)
+Completed 200 OK in 6645ms (Views: 7.6ms | ActiveRecord: 94.8ms | Allocations: 285996)
+
+
+  [1m[36mAddress Load (1.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2025-05-14 18:29:38 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 91.9ms | Allocations: 1356)
+  Rendered layout layouts/application.html.erb (Duration: 212.3ms | Allocations: 18442)
+Completed 200 OK in 241ms (Views: 235.5ms | ActiveRecord: 0.0ms | Allocations: 20188)
+
+
+Started GET "/forecast?address=987272&commit=Get+Forecast" for ::1 at 2025-05-14 18:29:46 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"987272", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1166)
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 2254)
+Completed 200 OK in 582ms (Views: 53.4ms | ActiveRecord: 0.0ms | Allocations: 5115)
+
+
+Started GET "/forecast?address=606550&commit=Get+Forecast" for ::1 at 2025-05-14 18:30:08 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"606550", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2262)
+Completed 200 OK in 499ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3797)
+
+
+Started GET "/forecast?address=671121&commit=Get+Forecast" for ::1 at 2025-05-14 18:30:29 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"671121", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (3.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" IS NULL AND "addresses"."state" = $1 AND "addresses"."zip_code" = $2 AND "addresses"."latitude" = $3 AND "addresses"."longitude" = $4 LIMIT $5[0m  [["state", "Kerala"], ["zip_code", "671121"], ["latitude", "12.5047921"], ["longitude", "74.9932639"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mAddress Create (2.9ms)[0m  [1m[32mINSERT INTO "addresses" ("street", "city", "state", "zip_code", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["street", nil], ["city", nil], ["state", "Kerala"], ["zip_code", "671121"], ["latitude", "12.5047921"], ["longitude", "74.9932639"], ["created_at", "2025-05-14 13:00:30.492538"], ["updated_at", "2025-05-14 13:00:30.492538"]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+New {:address=>{:street=>nil, :city=>nil, :state=>"Kerala", :zip_code=>"671121"}, :current=>{:temperature=>302.65, :feels_like=>308.35, :min=>302.65, :max=>302.65, :humidity=>76, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>3.16, :datetime=>2025-05-14 18:30:30 +0530}, :timestamp=>2025-05-14 18:30:30.979069 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 1654)
+Completed 200 OK in 1196ms (Views: 9.8ms | ActiveRecord: 90.4ms | Allocations: 11703)
+
+
+  [1m[36mAddress Load (3.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2025-05-14 18:30:54 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 18433)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 19518)
+
+
+Started GET "/forecast?address=671123&commit=Get+Forecast" for ::1 at 2025-05-14 18:31:12 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"671123", "commit"=>"Get Forecast"}
+New {:address=>{:street=>nil, :city=>nil, :state=>"Kerala", :zip_code=>"671121"}, :current=>{:temperature=>302.65, :feels_like=>308.35, :min=>302.65, :max=>302.65, :humidity=>76, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>3.16, :datetime=>2025-05-14 18:30:30 +0530}, :timestamp=>2025-05-14 18:30:30.979069 +0530, :cached=>true}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 445)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1647)
+Completed 200 OK in 72ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3048)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:31:25 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 2379)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.0ms | Allocations: 2617)
+
+
+Started GET "/forecast?address=605036&commit=Get+Forecast" for ::1 at 2025-05-14 18:31:31 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"605036", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (3.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" = $1 AND "addresses"."city" = $2 AND "addresses"."state" = $3 AND "addresses"."zip_code" = $4 AND "addresses"."latitude" = $5 AND "addresses"."longitude" = $6 LIMIT $7[0m  [["street", "Ca Basse"], ["city", "Caprile"], ["state", "Emilia-Romagna"], ["zip_code", "44021"], ["latitude", "44.8603679"], ["longitude", "12.1586176"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mAddress Create (3.5ms)[0m  [1m[32mINSERT INTO "addresses" ("street", "city", "state", "zip_code", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["street", "Ca Basse"], ["city", "Caprile"], ["state", "Emilia-Romagna"], ["zip_code", "44021"], ["latitude", "44.8603679"], ["longitude", "12.1586176"], ["created_at", "2025-05-14 13:03:16.494153"], ["updated_at", "2025-05-14 13:03:16.494153"]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+New {:address=>{:street=>"Ca Basse", :city=>"Caprile", :state=>"Emilia-Romagna", :zip_code=>"44021"}, :current=>{:temperature=>295.88, :feels_like=>295.51, :min=>295.88, :max=>295.88, :humidity=>50, :weather=>"Clear", :description=>"clear sky", :icon=>"01d", :wind_speed=>3.42, :datetime=>2025-05-14 18:33:16 +0530}, :timestamp=>2025-05-14 18:33:16.725672 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1331)
+Completed 200 OK in 105673ms (Views: 10.1ms | ActiveRecord: 32.4ms | Allocations: 1948204)
+
+
+Started GET "/" for ::1 at 2025-05-14 18:33:25 +0530
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2365)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 2602)
+
+
+Started GET "/forecast?address=686503&commit=Get+Forecast" for ::1 at 2025-05-14 18:33:34 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"686503", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (2.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" IS NULL AND "addresses"."state" = $1 AND "addresses"."zip_code" = $2 AND "addresses"."latitude" = $3 AND "addresses"."longitude" = $4 LIMIT $5[0m  [["state", "Kerala"], ["zip_code", "686503"], ["latitude", "9.6108261"], ["longitude", "76.6807632"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mAddress Create (3.7ms)[0m  [1m[32mINSERT INTO "addresses" ("street", "city", "state", "zip_code", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["street", nil], ["city", nil], ["state", "Kerala"], ["zip_code", "686503"], ["latitude", "9.6108261"], ["longitude", "76.6807632"], ["created_at", "2025-05-14 13:05:19.583209"], ["updated_at", "2025-05-14 13:05:19.583209"]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+New {:address=>{:street=>nil, :city=>nil, :state=>"Kerala", :zip_code=>"686503"}, :current=>{:temperature=>298.41, :feels_like=>299.42, :min=>298.41, :max=>298.41, :humidity=>93, :weather=>"Rain", :description=>"light rain", :icon=>"10d", :wind_speed=>1.17, :datetime=>2025-05-14 18:35:19 +0530}, :timestamp=>2025-05-14 18:35:19.775917 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1328)
+Completed 200 OK in 104956ms (Views: 9.3ms | ActiveRecord: 5.6ms | Allocations: 2779798)
+
+
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for ::1 at 2025-05-14 18:35:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1955)
+  Rendered layout layouts/application.html.erb (Duration: 142.9ms | Allocations: 47151)
+Completed 200 OK in 352ms (Views: 149.5ms | ActiveRecord: 0.0ms | Allocations: 64364)
+
+
+Started GET "/forecast?address=Silicon+Valley%2C+440+N.+Wolfe+Rd.%2C++Sunnyvale+CA%2C+94085%2C++USA&commit=Get+Forecast" for ::1 at 2025-05-14 18:36:49 +0530
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"Silicon Valley, 440 N. Wolfe Rd.,  Sunnyvale CA, 94085,  USA", "commit"=>"Get Forecast"}
+New {:error=>"Could not geocode address"}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/index.html.erb within layouts/application
+  Rendered forecasts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 2176)
+Completed 200 OK in 1019ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 14743)
+
+
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mOPENWEATHER_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/forecast?address=10001&commit=Get+Forecast" for ::1 at 2025-05-14 18:53:28 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ForecastsController#show as HTML
+  Parameters: {"address"=>"10001", "commit"=>"Get Forecast"}
+  [1m[36mAddress Load (6.0ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."street" IS NULL AND "addresses"."city" = $1 AND "addresses"."state" = $2 AND "addresses"."zip_code" = $3 AND "addresses"."latitude" = $4 AND "addresses"."longitude" = $5 LIMIT $6[0m  [["city", "Cáceres"], ["state", "Extremadura"], ["zip_code", "10001"], ["latitude", "39.5007376"], ["longitude", "-6.4057897"], ["LIMIT", 1]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mAddress Create (2.6ms)[0m  [1m[32mINSERT INTO "addresses" ("street", "city", "state", "zip_code", "latitude", "longitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["street", nil], ["city", "Cáceres"], ["state", "Extremadura"], ["zip_code", "10001"], ["latitude", "39.5007376"], ["longitude", "-6.4057897"], ["created_at", "2025-05-14 13:23:28.839361"], ["updated_at", "2025-05-14 13:23:28.839361"]]
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/weather_service.rb:35:in `get_forecast'
+New {:address=>{:street=>nil, :city=>"Cáceres", :state=>"Extremadura", :zip_code=>"10001"}, :current=>{:temperature=>292.59, :feels_like=>291.87, :min=>292.59, :max=>292.59, :humidity=>49, :weather=>"Clouds", :description=>"overcast clouds", :icon=>"04d", :wind_speed=>4.18, :datetime=>2025-05-14 18:53:29 +0530}, :timestamp=>2025-05-14 18:53:29.082343 +0530, :cached=>false}
+  Rendering layout layouts/application.html.erb
+  Rendering forecasts/show.html.erb within layouts/application
+  Rendered forecasts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 704)
+  Rendered layout layouts/application.html.erb (Duration: 123.7ms | Allocations: 45898)
+Completed 200 OK in 1233ms (Views: 129.6ms | ActiveRecord: 36.9ms | Allocations: 360057)
+
+
+  [1m[36mAddress Load (7.8ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" ORDER BY "addresses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]

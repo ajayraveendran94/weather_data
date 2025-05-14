@@ -1,0 +1,43 @@
+<div class="max-w-4xl mx-auto p-6">
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">Weather Forecast</h1>
+        <%= link_to "New Search", root_path, class: "px-4 py-2 bg-gray-200 rounded-md hover:bg-gray-300" %>
+    </div>
+
+    <% if @forecast && !@forecast[:error] %>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Address Header -->
+            <div class="bg-blue-500 text-white p-4">
+                <h2 class="text-xl font-bold"><%= @forecast.dig(:address, :street) %></h2>
+                <p><%= [@forecast.dig(:address, :city), @forecast.dig(:address, :state), @forecast.dig(:address, :zip_code)].compact.join(', ') %></p>
+    
+                <% if @forecast[:cached] %>
+                    <div class="mt-2 inline-block bg-yellow-400 text-blue-900 px-2 py-1 rounded text-sm font-medium">
+                        Cached Result (30 min)
+                    </div>
+                <% end %>
+            </div>
+    
+            <!-- Current Weather -->
+            <div class="p-6 border-b">
+                <h3 class="text-xl font-bold mb-4">Current Conditions</h3>
+    
+                <div class="flex items-center">
+                    <div class="text-5xl font-bold mr-4"><%= @forecast.dig(:current, :temperature).round %>°F</div>
+    
+                    <div class="mr-8">
+                        <div class="font-medium"><%= @forecast.dig(:current, :weather) %></div>
+                        <div class="text-gray-600"><%= @forecast.dig(:current, :description).titleize %></div>
+                    </div>
+    
+                    <div>
+                        <div class="text-gray-700">High: <span class="font-medium"><%= @forecast.dig(:current, :max).round %>°F</span></div>
+                        <div class="text-gray-700">Low: <span class="font-medium"><%= @forecast.dig(:current, :min).round %>°F</span></div>
+                        <div class="text-gray-700">Feels like: <span class="font-medium"><%= @forecast.dig(:current, :feels_like).round %>°F</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <% end %>
+</div>
