@@ -1,0 +1,36 @@
+***......F.
+
+Pending: (Failures listed here are expected and do not affect your suite's status)
+
+  1) ForecastsHelper add some examples to (or delete) /Users/ajayraveendran/Documents/Projects/weather_data/spec/helpers/forecasts_helper_spec.rb
+     # Not yet implemented
+     # ./spec/helpers/forecasts_helper_spec.rb:14
+
+  2) Address add some examples to (or delete) /Users/ajayraveendran/Documents/Projects/weather_data/spec/models/address_spec.rb
+     # Not yet implemented
+     # ./spec/models/address_spec.rb:4
+
+  3) Forecasts GET /index add some examples (or delete) /Users/ajayraveendran/Documents/Projects/weather_data/spec/requests/forecasts_spec.rb
+     # Not yet implemented
+     # ./spec/requests/forecasts_spec.rb:5
+
+Failures:
+
+  1) WeatherService.get_forecast when forecast is not cached fetches forecast from API and caches it
+     Failure/Error: address_or_zip = address_or_zip.split(",")[-2]
+
+     NoMethodError:
+       undefined method `split' for an instance of Address
+     # ./app/services/weather_service.rb:31:in `get_forecast'
+     # ./spec/services/weather_service_spec.rb:13:in `block (5 levels) in <main>'
+     # /Users/ajayraveendran/.rvm/gems/ruby-3.3.0/gems/vcr-6.3.1/lib/vcr/util/variable_args_block_caller.rb:9:in `call_block'
+     # /Users/ajayraveendran/.rvm/gems/ruby-3.3.0/gems/vcr-6.3.1/lib/vcr.rb:194:in `use_cassette'
+     # ./spec/services/weather_service_spec.rb:9:in `block (4 levels) in <main>'
+
+Finished in 0.20037 seconds (files took 1.83 seconds to load)
+11 examples, 1 failure, 3 pending
+
+Failed examples:
+
+rspec ./spec/services/weather_service_spec.rb:8 # WeatherService.get_forecast when forecast is not cached fetches forecast from API and caches it
+
