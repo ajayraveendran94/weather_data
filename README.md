@@ -67,5 +67,4 @@ bundle exec rspec
 
 - **API Rate Limiting**: The application implements caching to reduce API calls
 - **Database Indexing**: Key fields are indexed for faster lookups
-- **Stateless Design**: The application doesn't rely on session state
 - **Caching Strategy**: Cache invalidation is time-based for simplicity
