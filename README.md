@@ -41,7 +41,7 @@ This application follows standard Rails MVC architecture with additional service
 ### Installation
 
 1. Clone the repository
-   git clone https://github.com/yourusername/weather_forecast.git cd weather_forecast
+   git clone https://github.com/ajayraveendran94/weather_forecast.git cd weather_forecast
 
 2. Install dependencies
    bundle install
