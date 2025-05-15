@@ -10,7 +10,6 @@ A Ruby on Rails application that provides weather forecasts for a given address.
 
 - Address input with geocoding
 - Current weather conditions display
-- 5-day extended forecast
 - 30-minute caching by zip code
 - Cache indicator for cached results
 
